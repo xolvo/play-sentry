@@ -18,4 +18,7 @@ libraryDependencies ++= Seq(
 
 releaseSettings
 
-publishTo := Some("Purecode repository" at "http://play.purecode.ru/2.x")
+publishTo := Some(
+  Resolver.ssh("Purecode repository", "play.purecode.ru", "/home/www/playplugins/2.x")(Resolver.ivyStylePatterns)
+  as("www", file(sys.env("HOME") + "/.ssh/id_rsa"))
+)
