@@ -17,3 +17,5 @@ libraryDependencies ++= Seq(
 )
 
 releaseSettings
+
+publishTo := Some("Purecode repository" at "http://play.purecode.ru/2.x")
